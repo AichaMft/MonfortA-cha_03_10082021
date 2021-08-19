@@ -1,18 +1,65 @@
 @font-face {
     font-family: "shrikhand";
-    src: url(/public/police/Shrikhand-Regular.ttf) }
+    src: url("../police/Shrikhand-Regular.ttf") }
 @font-face {
         font-family: "roboto";
-        src: url(/public/police/Roboto-Regular.ttf) }
+        src: url("../police/Roboto-Regular.ttf") }
 
-footer {
-    background-color: black;
-    color: white;
-    h3 {
-        font-family: 'shrikhand';}
-    ul li{
-        text-decoration: none;
-        list-style: none;}
+@media screen and (max-width:1020px) {
+    body {
+        margin:0;
+    }
+    header {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .intro{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .fonctionnement{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        ol{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    .restaurants{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        article{
+            display: flex;
+        }
+        figure{
+            margin:0;
+        }
+    }
+    button {
+        background-color: #9356DC;
+    }
+    a {
+        text-decoration: none; }
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        a {
+            color: white;
+        }
+        h3 {
+            font-family: 'shrikhand';}
+        ul {
+            list-style: none;
+        }
+    }
+    p {
+        font-family:'roboto'}
 }
-p {
-    font-family:'roboto'}
