@@ -8,9 +8,6 @@
 @import "./composants/boutons";
 @import "./layout/form";
 
-html{
-    padding: 0.2rem;
-}
 @media screen and (max-width:420px) {
     body {
         margin:0;
@@ -26,7 +23,8 @@ html{
         background-color:$background1 ;
         i{
             font-size: large;
-            padding:0.4rem;
+            margin:$petit-rem + 0.1;
+            margin-right: 0;
         }
         form{
             text-align: center;
@@ -35,8 +33,9 @@ html{
                 background-color: $background1;
                 border:none;
                 font-size: medium;
-                font-weight: bold;
-                padding: 0.5rem;
+                font-weight: 600;
+                margin: $petit-rem + 0.1;
+                margin-left:0;
                 text-align:center;
             }
         }
@@ -48,6 +47,7 @@ html{
         text-align: center;
         align-items: center;
         background-color: $background2 ;
+        padding:2rem 0;
     }
     p{
         font-weight: 300;
@@ -58,22 +58,86 @@ html{
         flex-direction: column;
         justify-content: space-between;
         ol{
+            list-style: none;
+            counter-reset: "li";
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-        }
+            li{
+                counter-increment: li;
+                list-style-position:outside;
+                background-color: $background2;
+                font-weight: bold;
+                border:1px transparent $background2;
+                box-shadow: 2px 2px 2px $background1;
+                border-radius:0.5rem;
+                width:300px;
+                height: 25px;
+                margin:1rem 0 1rem 0;
+                padding:1rem 0 1rem 0;
+            }
+            li::before{
+                content:counter(li);
+                display: inline-block;
+                box-sizing: 1rem;
+                color: white;
+                background-color: $primary;
+                padding:$petit-rem;
+                border-radius: 1rem;
+                text-align: center;
+            }
+        }   
+    }
+    .fas.fa-mobile-alt , .fas.fa-list-ul , .fas.fa-store{
+        color:grey;
+        margin:0 0.5rem 0 0.5rem;
     }
     .restaurants{
         display:flex;
         flex-direction: column;
         justify-content: space-between;
-
-        article{
-            display: flex;
+        align-items: center;
+        background-color: $background2;
+        margin:1rem 0 1rem 0;
+        padding:2rem 0;
+        img{
+            width:350px;
+            height: 250px;
+            border-radius: 1rem 1rem 0 0;
+            margin:0;
+            float: inline-start;
+        }    
+        a{
+            height: 200px;
         }
         figure{
+            display:flex;
+            flex-direction: column;
             margin:0;
+            border-radius: 1rem;
+            padding:1rem;
+                figcaption{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    background-color: white;
+                    margin:0;
+                    padding:0.5rem;
+                    border-radius: 0 0 1rem 1rem;
+                }
+            h3{
+                margin:0;
+            }
+            .far.fa-heart{
+               font-size: xx-large;
+               margin:0.5rem 0.2rem;
+               cursor: pointer;
+            }
+            .far.fa-heart:hover{
+                color:$secondary $primary;
+            }
         }
+
     }
     a {
         text-decoration: none; }

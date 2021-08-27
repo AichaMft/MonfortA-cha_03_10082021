@@ -1,10 +1,11 @@
 @import "../utils/variables";
 button {
     background-image: linear-gradient($secondary,$primary);
-    box-shadow: 2px 2px 2px $shadow;
+    box-shadow: 3px 3px 3px $shadow;
     border-radius: 2rem;
     width: 250px;
     height:50px;
+    margin:1rem 0 2rem 0;
     color:white;
     font-weight: 600;
     font-size: medium ;
