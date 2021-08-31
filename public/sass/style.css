@@ -13,6 +13,25 @@ header {
   margin: 0.3rem;
 }
 
+@media screen and (max-width: 420px) {
+  a {
+    text-decoration: none;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  header .fas.fa-arrow-left {
+    color: #1b1b1b;
+    font-size: large;
+    text-align: center;
+    position: absolute;
+    padding: 0.5rem;
+    left: 5px;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -115,34 +134,35 @@ button {
     flex-direction: column;
     justify-content: space-between;
   }
+  .fonctionnement h2 {
+    margin-left: 0.5rem;
+  }
   .fonctionnement ol {
     list-style: none;
-    counter-reset: "li";
+    counter-reset: li;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   .fonctionnement ol li {
     counter-increment: li;
-    list-style-position: outside;
-    background-color: #F5F5F5;
+    position: relative;
+    background-color: white;
     font-weight: bold;
-    border: 1px transparent #F5F5F5;
     box-shadow: 2px 2px 2px #EFEFEF;
-    border-radius: 0.5rem;
-    width: 300px;
-    height: 25px;
+    border-radius: 10%;
     margin: 1rem 0 1rem 0;
     padding: 1rem 0 1rem 0;
   }
   .fonctionnement ol li::before {
     content: counter(li);
+    position: absolute;
+    left: -20px;
     display: inline-block;
-    box-sizing: 1rem;
     color: white;
     background-color: #9356DC;
     padding: 0.5rem;
-    border-radius: 1rem;
+    border-radius: 50%;
     text-align: center;
   }
 
@@ -151,7 +171,11 @@ button {
     margin: 0 0.5rem 0 0.5rem;
   }
 
-  .restaurants {
+  .restaurants h2 {
+    margin-left: 0.5rem;
+  }
+
+  .articles {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -160,24 +184,24 @@ button {
     margin: 1rem 0 1rem 0;
     padding: 2rem 0;
   }
-  .restaurants img {
+  .articles img {
     width: 350px;
     height: 250px;
     border-radius: 1rem 1rem 0 0;
     margin: 0;
     float: inline-start;
   }
-  .restaurants a {
+  .articles a {
     height: 200px;
   }
-  .restaurants figure {
+  .articles figure {
     display: flex;
     flex-direction: column;
     margin: 0;
     border-radius: 1rem;
     padding: 1rem;
   }
-  .restaurants figure figcaption {
+  .articles figure figcaption {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -186,15 +210,15 @@ button {
     padding: 0.5rem;
     border-radius: 0 0 1rem 1rem;
   }
-  .restaurants figure h3 {
+  .articles figure h3 {
     margin: 0;
   }
-  .restaurants figure .far.fa-heart {
+  .articles figure .far.fa-heart {
     font-size: xx-large;
     margin: 0.5rem 0.2rem;
     cursor: pointer;
   }
-  .restaurants figure .far.fa-heart:hover {
+  .articles figure .far.fa-heart:hover {
     color: #FF79da #9356DC;
   }
 
@@ -202,6 +226,35 @@ button {
     text-decoration: none;
   }
 }
-p {
-  font-family: "roboto";
+@media screen and (max-width: 420px) {
+  .intro2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .intro2 figure {
+    width: 350px;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+  }
+
+  .entrees {
+    position: relative;
+    top: 200px;
+    background-color: #F5F5F5;
+    border-radius: 15px 15px 0 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .entrees .titre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .entrees .fas.fa-heart {
+    position: relative;
+    bottom: -15px;
+    font-size: x-large;
+  }
 }
