@@ -1,3 +1,14 @@
+@media screen and (max-width:375px){
+    body{
+        max-width: 375px;
+    }
+    .articles{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .fas.fa-store{
+        color:$primary}
+}
     body {
         margin:0;
         font-family: "roboto";
@@ -152,14 +163,3 @@
     }
     a {
         text-decoration: none; }
-@media screen and (max-width:375px){
-    body{
-        max-width: 375px;
-    }
-    .articles{
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .fas.fa-store{
-        color:$primary}
-}
