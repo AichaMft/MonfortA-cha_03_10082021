@@ -1,38 +1,74 @@
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
     .intro2{
         display:flex;
         flex-direction: column;
+        flex-wrap: wrap;
+        img{
+            width: 375px;
+        }
         figure{
             width:350px;
-            position: absolute;
+            position: relative;
             padding:0;
             margin: 0;}
         }
-        .entrees{
-            position: relative;
-            top: 200px;
+        .titre{
+            display:flex;
+            flex-direction: row;
+            border-radius: 15px 15px 0 0;
+            justify-content: space-around;
+            font-family: "shrikhand";
+            font-size: small;
+            background-color: $background2;
+            position:absolute;
+            top:225px;
+            width: 100%;
+
+            .fas.fa-heart{
+                position:relative;
+                bottom:-20px;
+                font-size: x-large;
+            }
+        }
+        .entrees, .plats, .desserts{
             background-color: $background2 ;
-            border-radius: 18px 18px 0 0;
             padding:1rem;
             display: flex;
             flex-direction: column;
-            .titre{
-                display:flex;
-                flex-direction: row;
-                justify-content: space-between;
-        
-            }
+        }
             article{
                 background-color: white;
-                h4, h5{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                h5{
+                    opacity: 0.4;
+                    margin:0;
+                }
+                h4{
+                    margin:0;
+                }
+                .nomplats{
+                    display: flex;
+                    justify-items: center;
+                    flex-direction: column;
+                    padding:0.5rem;
                     margin:0;
                     font-size: small;
                 }
-            }
-        .fas.fa-heart{
-            position:relative;
-            bottom:-20px;
-            font-size: x-large;
-        }
+                .fas.fa-check-circle{
+                    position:relative;
+                    background-color: rgba(65, 219, 65, 0.664);
+                    padding:1rem;
+                    margin:0;
+                    color: white;
+                    font-size: medium;
+                }
         }
 
 

@@ -254,40 +254,78 @@ a {
   text-decoration: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .intro2 {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+}
+.intro2 img {
+  width: 375px;
 }
 .intro2 figure {
   width: 350px;
-  position: absolute;
+  position: relative;
   padding: 0;
   margin: 0;
 }
 
-.entrees {
-  position: relative;
-  top: 200px;
+.titre {
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px 15px 0 0;
+  justify-content: space-around;
+  font-family: "shrikhand";
+  font-size: small;
   background-color: #F5F5F5;
-  border-radius: 18px 18px 0 0;
+  position: absolute;
+  top: 225px;
+  width: 100%;
+}
+.titre .fas.fa-heart {
+  position: relative;
+  bottom: -20px;
+  font-size: x-large;
+}
+
+.entrees, .plats, .desserts {
+  background-color: #F5F5F5;
   padding: 1rem;
   display: flex;
   flex-direction: column;
 }
-.entrees .titre {
+
+article {
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.entrees article {
-  background-color: white;
+article h5 {
+  opacity: 0.4;
+  margin: 0;
 }
-.entrees article h4, .entrees article h5 {
+article h4 {
+  margin: 0;
+}
+article .nomplats {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  padding: 0.5rem;
   margin: 0;
   font-size: small;
 }
-.entrees .fas.fa-heart {
+article .fas.fa-check-circle {
   position: relative;
-  bottom: -20px;
-  font-size: x-large;
+  background-color: rgba(65, 219, 65, 0.664);
+  padding: 1rem;
+  margin: 0;
+  color: white;
+  font-size: medium;
 }
