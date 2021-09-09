@@ -318,7 +318,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   margin: 0;
-  border-radius: 35px 35px 0 0;
+  border-radius: 50px 50px 0 0;
   font-family: "shrikhand";
   background-color: #F5F5F5;
   position: absolute;
@@ -372,7 +372,6 @@ main {
   justify-content: space-between;
   background-color: white;
   margin: 0.5rem 0 0.5rem 0;
-  padding: 0.2rem 0 0.2rem 0.2rem;
   overflow: hidden;
   cursor: pointer;
   width: 320px;
@@ -395,29 +394,28 @@ main {
   transition: transform 0.5s;
 }
 .menus article .prix:hover {
-  transform: translateX(-80px);
+  transform: translateX(-50px);
 }
 .menus article p {
   font-size: small;
-  font-weight: bold;
-  position: absolute;
-  right: 0;
-  padding: 1rem;
+  font-weight: 580;
+  padding: 0.7rem 0.5rem 0 0;
 }
 .menus article .fas.fa-check-circle {
   background-color: #99E2D0;
-  padding: 1rem;
-  width: auto;
+  padding: 1.1rem;
+  width: 18px;
   color: white;
   font-size: medium;
-  margin: 0 -3rem 0 0;
+  margin: 0 -3.3rem 0 0;
+  height: 18px;
 }
 .menus article .nomplats {
   display: flex;
   justify-items: center;
   flex-direction: column;
   padding: 0.5rem;
-  margin: 0;
+  margin: 0.2rem;
   font-size: small;
 }
 .menus .titre_article {
@@ -432,6 +430,7 @@ main {
     left: 0;
     width: 100%;
     padding: 0;
+    top: 240px;
   }
 
   .menus {
