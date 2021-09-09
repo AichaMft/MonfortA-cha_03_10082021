@@ -7,7 +7,11 @@
         justify-content: space-between;
     }
     .fas.fa-store{
-        color:$primary}
+        color:$primary
+    }
+    .margearticle{
+        margin:0rem;
+    }
 }
     body {
         margin:0;
@@ -84,11 +88,11 @@
             li::before{
                 content:counter(li);
                 color: white;
-                font-size: 1rem;
+                font-size: 0.9rem;
                 font-weight: bold;
                 position: absolute;
                 --size: 20px;
-                left: calc(-1 * var(--size) + 5px);
+                left: calc(-1 * var(--size) + 10px);
                 line-height: var(--size);
                 width: var(--size);
                 height: var(--size);
@@ -110,9 +114,24 @@
 
     .restaurants{
         background-color: $background2;
-        padding:2rem 0.5rem 2rem 0.5rem;
+        padding:2rem 0.5rem 0 0.5rem;
         h2{
-            margin-left:0.5rem;
+            margin: 0 0 0 0.5rem;
+            width: 200px;
+            height: 10px;
+        }
+        .new{
+            padding:0.4rem;
+            background-color: $background3;
+            color:darken($color:$background3, $amount: 50%);
+            position:relative;
+            top:50px;
+            left:250px;
+            margin:0.3rem;
+            width: 66px;
+            height:20px;
+            font-weight: bold;
+            border-radius: 5%;
         }
     }
     .articles{
@@ -144,11 +163,15 @@
                     justify-content: space-between;
                     background-color: white;
                     margin:0;
-                    padding:0.5rem;
+                    padding:0.8rem;
                     border-radius: 0 0 1rem 1rem;
+                    p{
+                        margin:0.2rem 0 0.5rem 0;
+                        font-weight: 300;
+                    }
                 }
             h3{
-                margin:0;
+                margin:0.5rem 0 0 0;
             }
             .far.fa-heart{
                font-size: xx-large;
@@ -160,6 +183,9 @@
             }
         }
 
+    }
+    .margearticle{
+        margin:3.2rem 0 1rem 0;
     }
     a {
         text-decoration: none; }
