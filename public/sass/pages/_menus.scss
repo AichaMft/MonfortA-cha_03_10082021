@@ -8,17 +8,20 @@
         flex-direction: column;
         flex-wrap: wrap;
         background-color: $background1;
-        img{
-            width: 375px;
-            position: relative;
-            left: 135%;
+        .firstpic{
+            display: none;
+        }
+        .big_firstpic{
+            position:relative
         }
         figure{
-            width:350px;
-            position: relative;
-            padding:0;
-            margin: 0;}
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            height: 400px;
         }
+    }
         .titre{
             @include flexrow;
             margin:0;
@@ -26,22 +29,18 @@
             font-family: "shrikhand";
             background-color: $background2;
             position:absolute;
-            top:225px;
-            left: 25%;
-            width: 50%;
-            padding:1rem 1rem 0 1rem;
+            top:400px;
+            width: 100%;
             h1{
                 font-weight:500;
                 font-size:28px ;
-                padding-left:1rem;
+                padding:1rem 0 0 1.5rem;
             }
             .far.fa-heart , .fas.fa-heart{
-                padding-right: 0.5rem;
-                position:relative;
-                bottom:-27px;
+                position:absolute;
                 font-size: x-large;
-                margin-right:0.3rem;
-                font-weight: 400;
+                right:40px;
+                top:2.5rem;
             }
         }
     .menus{
@@ -90,7 +89,7 @@
                     transform:translateX(0);
                     transition:transform .5s;
                 }
-                .prix:hover{
+                .prix:hover {
                     transform:translateX(-50px)
                 }
                 p{
@@ -148,15 +147,20 @@
         }
     }
     .intro2{
-        img{
+        figure{
+            height: 250px;
+        }
+        .firstpic{
+            display: block;
             width: 375px;
             position: relative;
             left: 0;
         }
+        .big_firstpic{
+            display:none;
+        }
+        .titre_article{
+            margin:0;
+        }
     }
-    .titre_article{
-        margin:0;
-    }
-    }
-
-
+}

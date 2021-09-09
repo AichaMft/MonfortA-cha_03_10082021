@@ -301,16 +301,18 @@ main {
   flex-wrap: wrap;
   background-color: #EFEFEF;
 }
-.intro2 img {
-  width: 375px;
+.intro2 .firstpic {
+  display: none;
+}
+.intro2 .big_firstpic {
   position: relative;
-  left: 135%;
 }
 .intro2 figure {
-  width: 350px;
-  position: relative;
+  width: 100%;
   padding: 0;
   margin: 0;
+  overflow: hidden;
+  height: 400px;
 }
 
 .titre {
@@ -322,23 +324,19 @@ main {
   font-family: "shrikhand";
   background-color: #F5F5F5;
   position: absolute;
-  top: 225px;
-  left: 25%;
-  width: 50%;
-  padding: 1rem 1rem 0 1rem;
+  top: 400px;
+  width: 100%;
 }
 .titre h1 {
   font-weight: 500;
   font-size: 28px;
-  padding-left: 1rem;
+  padding: 1rem 0 0 1.5rem;
 }
 .titre .far.fa-heart, .titre .fas.fa-heart {
-  padding-right: 0.5rem;
-  position: relative;
-  bottom: -27px;
+  position: absolute;
   font-size: x-large;
-  margin-right: 0.3rem;
-  font-weight: 400;
+  right: 40px;
+  top: 2.5rem;
 }
 
 .menus {
@@ -453,13 +451,19 @@ main {
     display: none;
   }
 
-  .intro2 img {
+  .intro2 figure {
+    height: 250px;
+  }
+  .intro2 .firstpic {
+    display: block;
     width: 375px;
     position: relative;
     left: 0;
   }
-
-  .titre_article {
+  .intro2 .big_firstpic {
+    display: none;
+  }
+  .intro2 .titre_article {
     margin: 0;
   }
 }
