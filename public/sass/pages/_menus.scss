@@ -12,7 +12,8 @@
             display: none;
         }
         .big_firstpic{
-            position:relative
+            position:relative;
+            top:-100px;
         }
         figure{
             width: 100%;
@@ -36,11 +37,23 @@
                 font-size:28px ;
                 padding:1rem 0 0 1.5rem;
             }
-            .far.fa-heart , .fas.fa-heart{
+            .far.fa-heart {
                 position:absolute;
                 font-size: x-large;
                 right:40px;
                 top:2.5rem;
+            }
+            .fas.fa-heart{
+                position:absolute;
+                font-size: x-large;
+                right:40px;
+                top:2.5rem;
+                color:transparent;
+            }
+            .fas.fa-heart:hover{
+                background-image:$gradient;
+                background-clip: text;
+                -webkit-background-clip: text;
             }
         }
     .menus{
@@ -76,6 +89,8 @@
                 width: 320px;
                 box-shadow: 0.25rem 0.25rem 1rem rgba(0,0,0,.1);
                 border-radius: 0.8rem;
+                animation: checkcircle 1s forwards;
+                opacity: 0;
                 h5{
                     opacity: 0.8;
                     font-weight: 400;
@@ -84,37 +99,49 @@
                 h4{
                     margin:0;
                 }
-                .prix{
-                    @include flexrow;
-                    transform:translateX(0);
-                    transition:transform .5s;
-                }
-                .prix:hover {
-                    transform:translateX(-50px)
-                }
-                p{
-                    font-size: small;
-                    font-weight: 580;
-                    padding: 0.7rem 0.5rem 0 0;
-                }
-                .fas.fa-check-circle{
-                   background-color: $third;
-                   padding: 1.1rem;
-                   width: 18px;
-                    color: white;
-                    font-size: medium;
-                    margin: 0 -3.4rem 0 0;
-                    height: 18px
-                }
                 .nomplats{
                     display: flex;
                     justify-items: center;
                     flex-direction: column;
-                    padding:0.5rem;
-                    margin:0.2rem;
+                    margin:0.5rem 0 0.5rem 0.5rem;
                     font-size: small;
+                    width:220px;
                 }
-        }
+                p{
+                    font-size: small;
+                    font-weight: 580;
+                    padding:0;
+                    margin:1.5rem 0 0 0;
+                }
+                .fas.fa-check-circle{
+                    opacity:0;
+                    transform:rotate(0deg);
+                    transition: 0.4s ease-in-out;
+                }
+            }
+                    article:hover{
+                        .fas.fa-check-circle{
+                        background-color: $third;
+                        padding: 1.1rem;
+                        width: 18px;
+                        color: white;
+                        font-size: medium;
+                        margin: 0;
+                        height: 18px;
+                        opacity: 1;
+                        transform: rotate(360deg);
+                        }
+            }
+@keyframes checkcircle {
+    0%{
+        transform:translateY(20px);
+        opacity:0%
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 100%
+    }  
+}
         .titre_article{
             @include flexcolumn;
             margin:1rem;

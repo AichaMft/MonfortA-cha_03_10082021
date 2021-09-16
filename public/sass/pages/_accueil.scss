@@ -150,18 +150,32 @@
                         margin:0.2rem 0 0.5rem 0;
                         font-weight: 300;
                     }
+                    h3{
+                        margin:0.5rem 0 0 0;
+                    }
+                    .far.fa-heart{
+                    font-size: xx-large;
+                    margin: 0.5rem 0.2rem 0.5rem 18rem;
+                    cursor: pointer;
+                    position:absolute;
+                    font-weight: 300;
+                    }
+                    .fas.fa-heart{
+                    font-size: xx-large;
+                    margin: 0.5rem 0.2rem 0.5rem 18rem;
+                    cursor: pointer;
+                    position:absolute;
+                    color: transparent;
+                    }
+                    .fas.fa-heart:hover{
+                        background-image:$gradient;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                    }
+                    .far.fa-heart:hover{
+                        background-color: transparent;
+                    }
                 }
-            h3{
-                margin:0.5rem 0 0 0;
-            }
-            .far.fa-heart{
-               font-size: xx-large;
-               margin:0.5rem 0.2rem;
-               cursor: pointer;
-            }
-            .far.fa-heart:hover{
-                color:$secondary $primary;
-            }
         }
 
     }
