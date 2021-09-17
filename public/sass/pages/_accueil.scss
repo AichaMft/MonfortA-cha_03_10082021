@@ -1,73 +1,82 @@
     body {
-        margin:0;
+        margin: 0;
         font-family: "roboto";
     }
-    .search_bar{
+
+    .search_bar {
         display: flex;
         flex-direction: row;
         justify-content: center;
         text-align: center;
         height: 40px;
-        background-color:$background1 ;
-        i{
+        background-color: $background1;
+
+        i {
             font-size: large;
-            margin:$petit-rem + 0.1;
+            margin: $petit-rem + 0.1;
             margin-right: 0;
         }
-        form{
+
+        form {
             text-align: center;
             height: 40px;
-            input{
+
+            input {
                 background-color: $background1;
-                border:none;
+                border: none;
                 font-size: medium;
                 font-weight: 560;
                 margin: $petit-rem + 0.1;
-                margin-left:0;
-                text-align:center;
+                margin-left: 0;
+                text-align: center;
                 width: max-content;
             }
         }
     }
 
-    .intro{
+    .intro {
         @include flexcolumn;
         text-align: center;
         align-items: center;
-        background-color: $background2 ;
-        padding:2rem 0;
+        background-color: $background2;
+        padding: 2rem 0;
     }
-    p{
+
+    p {
         font-weight: 300;
         color: rgb(29, 28, 28);
     }
 
-    .fonctionnement{
+    .fonctionnement {
         @include flexcolumn;
-        margin:0;
-        padding:2rem 0 1rem 0;
-        h2{
-            margin:0 0 0 1rem;
+        margin: 0;
+        padding: 2rem 0 1rem 0;
+
+        h2 {
+            margin: 0 0 0 1rem;
         }
-        ol{
+
+        ol {
             list-style: none;
             counter-reset: li;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            li{
+
+            li {
                 counter-increment: li;
                 position: relative;
                 background-color: $background2;
                 font-weight: bold;
                 box-shadow: 3px 3px 3px $background1;
-                border-radius:1rem;
-                margin:1rem 0 1rem 0;
-                padding:1.5rem 0 1.5rem 1rem;
+                border-radius: 1rem;
+                margin: 1rem 0 1rem 0;
+                padding: 1.5rem 0 1.5rem 1rem;
                 width: 250px;
             }
-            li::before{
-                content:counter(li);
+
+            li::before {
+                content: counter(li);
                 color: white;
                 font-size: 0.9rem;
                 font-weight: bold;
@@ -82,126 +91,152 @@
                 border-radius: 50%;
                 text-align: center;
             }
-        }   
+        }
     }
-    .fas.fa-mobile-alt , .fas.fa-list-ul , .fas.fa-store{
-        color:grey;
-        margin:0 0.5rem 0 0.5rem;
+
+    .fas.fa-mobile-alt,
+    .fas.fa-list-ul,
+    .fas.fa-store {
+        color: grey;
+        margin: 0 0.5rem 0 0.5rem;
     }
-    .fas.fa-mobile-alt:hover , .fas.fa-list-ul:hover , .fas.fa-store:hover{
-        color:$primary;
+
+    .fas.fa-mobile-alt:hover,
+    .fas.fa-list-ul:hover,
+    .fas.fa-store:hover {
+        color: $primary;
         transition-duration: 60s;
     }
 
-    .restaurants{
+    .restaurants {
         background-color: $background2;
-        padding:2rem 0.5rem 0 0.5rem;
-        h2{
+        padding: 2rem 0.5rem 0 0.5rem;
+
+        h2 {
             margin: 0 0 0 0.5rem;
             width: 200px;
             height: 10px;
         }
-        .new{
-            padding:0.4rem;
+
+        .new {
+            padding: 0.4rem;
             background-color: $third;
-            color:darken($color:$third, $amount: 50%);
-            position:relative;
-            top:50px;
-            left:250px;
-            margin:0.3rem;
+            color: darken($color:$third, $amount: 50%);
+            position: relative;
+            top: 50px;
+            left: 250px;
+            margin: 0.3rem;
             width: 66px;
-            height:20px;
+            height: 20px;
             font-weight: bold;
             border-radius: 5%;
         }
     }
-    .articles{
-        display:flex;
+
+    .articles {
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-        margin:1rem 0 1rem 0;
-        img{
-            width:350px;
+        margin: 1rem 0 1rem 0;
+
+        img {
+            width: 350px;
             height: 250px;
             border-radius: 1rem 1rem 0 0;
-            margin:0;
+            margin: 0;
             float: inline-start;
-        }    
-        a{
+        }
+
+        a {
             height: 200px;
         }
-        figure{
-            display:flex;
+
+        figure {
+            display: flex;
             flex-direction: column;
-            margin:0;
+            margin: 0;
             border-radius: 1rem;
-            padding:0 0 1rem 0;
-                figcaption{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    background-color: white;
-                    margin:0;
-                    padding:0.8rem;
-                    border-radius: 0 0 1rem 1rem;
-                    p{
-                        margin:0.2rem 0 0.5rem 0;
-                        font-weight: 300;
-                    }
-                    h3{
-                        margin:0.5rem 0 0 0;
-                    }
-                    .far.fa-heart{
-                    font-size: xx-large;
-                    margin: 0.5rem 0.2rem 0.5rem 18rem;
-                    cursor: pointer;
-                    position:absolute;
+            padding: 0 0 1rem 0;
+
+            figcaption {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                background-color: white;
+                margin: 0;
+                padding: 0.8rem;
+                border-radius: 0 0 1rem 1rem;
+
+                p {
+                    margin: 0.2rem 0 0.5rem 0;
                     font-weight: 300;
-                    }
-                    .fas.fa-heart{
+                }
+
+                h3 {
+                    margin: 0.5rem 0 0 0;
+                }
+
+                .far.fa-heart {
                     font-size: xx-large;
                     margin: 0.5rem 0.2rem 0.5rem 18rem;
                     cursor: pointer;
-                    position:absolute;
-                    color: transparent;
-                    }
-                    .fas.fa-heart:hover{
-                        background-image:$gradient;
-                        background-clip: text;
-                        -webkit-background-clip: text;
-                    }
-                    .far.fa-heart:hover{
-                        background-color: transparent;
-                    }
+                    position: absolute;
+                    font-weight: 300;
                 }
+
+                .fas.fa-heart {
+                    font-size: xx-large;
+                    margin: 0.5rem 0.2rem 0.5rem 18rem;
+                    cursor: pointer;
+                    position: absolute;
+                    color: transparent;
+                }
+
+                .fas.fa-heart:hover {
+                    background-image: $gradient;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                }
+
+                .far.fa-heart:hover {
+                    background-color: transparent;
+                }
+            }
         }
 
     }
-    .margearticle{
-        margin:3.2rem 0 1rem 0;
+
+    .margearticle {
+        margin: 3.2rem 0 1rem 0;
     }
+
     a {
-        text-decoration: none; }
-    
-@media screen and (max-width:375px){
-            body{
-                max-width: 375px;
-            }
-            .articles{
-                @include flexcolumn;
-            }
-            .fas.fa-store{
-                color:$primary
-            }
-            .margearticle{
-                margin:0rem;
-            }
-            .fonctionnement {
-                ol{
+        text-decoration: none;
+    }
+
+    @media screen and (max-width:375px) {
+        body {
+            max-width: 375px;
+        }
+
+        .articles {
+            @include flexcolumn;
+        }
+
+        .fas.fa-store {
+            color: $primary
+        }
+
+        .margearticle {
+            margin: 0rem;
+        }
+
+        .fonctionnement {
+            ol {
                 flex-direction: column;
                 justify-content: space-between;
-                }
             }
-}
+        }
+    }
