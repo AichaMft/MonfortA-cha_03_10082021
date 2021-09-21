@@ -129,6 +129,10 @@
                 font-weight: 580;
                 padding: 0;
                 margin: 1.5rem 0 0 0;
+                position:relative;
+                left:25px;
+                transform: translateX(0);
+                transition: 0.4s forwards;
             }
 
             .fas.fa-check-circle {
@@ -150,11 +154,14 @@
                 opacity: 1;
                 transform: rotate(360deg);
             }
+            p{
+                transform: translateX(-20px);
+            }
         }
 
         @keyframes checkcircle {
             0% {
-                transform: translateY(20px);
+                transform: translateY(10px);
                 opacity: 0%
             }
 
