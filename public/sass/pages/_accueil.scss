@@ -183,7 +183,8 @@
                     margin: 0.5rem 0.2rem 0.5rem 18rem;
                     cursor: pointer;
                     position: absolute;
-                    font-weight: 300;
+                    font-weight:normal;
+                    color:grey;
                 }
 
                 .fas.fa-heart {
@@ -193,15 +194,13 @@
                     position: absolute;
                     color: transparent;
                 }
-
                 .fas.fa-heart:hover {
                     background-image: $gradient;
                     background-clip: text;
                     -webkit-background-clip: text;
                 }
-
                 .far.fa-heart:hover {
-                    background-color: transparent;
+                    color:$background1;
                 }
             }
         }
