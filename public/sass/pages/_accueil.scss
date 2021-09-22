@@ -99,7 +99,7 @@
     .fas.fa-list-ul,
     .fas.fa-store {
         color: grey;
-        margin: 0 0.5rem 0 0.5rem;
+        margin: 0 $petit-rem 0 $petit-rem;
     }
 
     .fas.fa-mobile-alt:hover,
@@ -111,10 +111,10 @@
 
     .restaurants {
         background-color: $background2;
-        padding: 2rem 0.5rem 0 0.5rem;
+        padding: 2rem $petit-rem 0 $petit-rem;
 
         h2 {
-            margin: 0 0 0 0.5rem;
+            margin: 0 0 0 $petit-rem;
             width: 200px;
             height: 10px;
         }
@@ -171,17 +171,17 @@
                 border-radius: 0 0 1rem 1rem;
 
                 p {
-                    margin: 0.2rem 0 0.5rem 0;
+                    margin: 0.2rem 0 $petit-rem 0;
                     font-weight: 300;
                 }
 
                 h3 {
-                    margin: 0.5rem 0 0 0;
+                    margin: $petit-rem 0 0 0;
                 }
 
                 .far.fa-heart {
                     font-size: xx-large;
-                    margin: 0.5rem 0.2rem 0.5rem 18rem;
+                    margin: $petit-rem 0.2rem $petit-rem 18rem;
                     cursor: pointer;
                     position: absolute;
                     font-weight:normal;
@@ -190,7 +190,7 @@
 
                 .fas.fa-heart {
                     font-size: xx-large;
-                    margin: 0.5rem 0.2rem 0.5rem 18rem;
+                    margin: $petit-rem 0.2rem $petit-rem 18rem;
                     cursor: pointer;
                     position: absolute;
                     color: transparent;
